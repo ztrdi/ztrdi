@@ -1,0 +1,17 @@
+using UnityEngine;
+
+public class Following : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Camera m_Camera = null;
+    public GameObject m_goFollowing = null;
+    public Vector3 m_vOffset;
+
+    void OnGUI()
+    {
+        Vector3 vPosScreen = m_Camera.WorldToScreenPoint(m_goFollowing.transform.position + m_vOffset);
+        GUI.Label(new Rect(vPosScreen.x, Screen.height - vPosScreen.y, 200, 80), this.name);  
+    }
+
+}
