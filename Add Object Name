@@ -11,7 +11,9 @@ public class Following : MonoBehaviour
     void OnGUI()
     {
         Vector3 vPosScreen = m_Camera.WorldToScreenPoint(m_goFollowing.transform.position + m_vOffset);
+        GUI.color = Color.black;
         GUI.Label(new Rect(vPosScreen.x, Screen.height - vPosScreen.y, 200, 80), this.name);  
     }
 
 }
+//https://docs.unity3d.com/6000.0/Documentation/ScriptReference/GUI-color.html
