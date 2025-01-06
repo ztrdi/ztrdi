@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public class closeobjectname : MonoBehaviour
+{
+    public GameObject target;
+    public Component[] objects;
+
+    public void closeobjectname_btn()
+    {
+       objects = target.GetComponentsInChildren<showobjectname>();
+       foreach (showobjectname joint in objects)
+       joint.enabled = !joint.enabled;
+    }
+}
